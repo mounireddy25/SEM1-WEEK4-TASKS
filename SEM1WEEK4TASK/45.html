@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Class Example</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+            color: black;
+            padding: 10px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="myElement">Click the button to toggle the class on this element.</div>
+    <button id="toggleButton">Toggle Class</button>
+    <script>
+        // Function to toggle a class on the element
+        function toggleClass() {
+            // Select the element to which the class will be toggled
+            const element = document.getElementById('myElement');
+            
+            // Toggle the 'highlight' class on the element
+            element.classList.toggle('highlight');
+        }
+        // Add an event listener to the button to trigger the function
+        const button = document.getElementById('toggleButton');
+        button.addEventListener('click', toggleClass);
+    </script>
+</body>
+</html>

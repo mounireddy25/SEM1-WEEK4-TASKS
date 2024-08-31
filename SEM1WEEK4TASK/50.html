@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Press Logger</title>
+</head>
+<body>
+    <h2>Press any key in the input field below:</h2>
+    <input type="text" id="inputField" placeholder="Type something..." />
+
+    <script>
+        // Select the input field
+        const inputField = document.getElementById('inputField');
+
+        // Add an event listener for the 'keydown' event
+        inputField.addEventListener('keydown', function(event) {
+            // Log the key pressed by the user
+            console.log(`Key pressed: ${event.key}`);
+        });
+    </script>
+</body>
+</html>

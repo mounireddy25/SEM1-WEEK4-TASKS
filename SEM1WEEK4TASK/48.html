@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone Element Example</title>
+</head>
+<body>
+    <div id="originalElement">I am the original element!</div>
+    <button id="cloneButton">Clone Element</button>
+
+    <script>
+        // Function to clone an element and append it to the body
+        function cloneAndAppendElement() {
+            // Select the element to be cloned
+            const originalElement = document.getElementById('originalElement');
+            
+            // Clone the element
+            const clonedElement = originalElement.cloneNode(true);
+            
+            // Append the cloned element to the body
+            document.body.appendChild(clonedElement);
+        }
+
+        // Add an event listener to the button to trigger the cloning
+        const cloneButton = document.getElementById('cloneButton');
+        cloneButton.addEventListener('click', cloneAndAppendElement);
+    </script>
+</body>
+</html>
